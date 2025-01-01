@@ -5,7 +5,7 @@ import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  app.setGlobalPrefix("api");
+  app.setGlobalPrefix("api/v1");
 
   if (process.env.NODE_ENV !== "production") {
     const config = new DocumentBuilder()
@@ -16,7 +16,7 @@ async function bootstrap() {
 
     const document = SwaggerModule.createDocument(app, config);
 
-    SwaggerModule.setup("api/swagger", app, document);
+    SwaggerModule.setup("api/v1/swagger", app, document);
   }
 
   await app.listen(3000);
