@@ -1,8 +1,8 @@
 import { Injectable } from "@nestjs/common";
 
 @Injectable()
-export class TempoService {
+export class DaysTempoService {
   findAll() {
-    return `This action returns all tempo`;
+    return `This action returns all daysTempo`;
   }
 }

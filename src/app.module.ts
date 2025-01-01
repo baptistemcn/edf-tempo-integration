@@ -2,11 +2,11 @@ import { Module } from "@nestjs/common";
 import { APP_GUARD } from "@nestjs/core";
 import { ThrottlerGuard } from "@nestjs/throttler";
 
-import { TempoModule } from "./tempo/tempo.module";
+import { DaysTempoModule } from "./days-tempo/days-tempo.module";
 import { SharedModule } from "./shared/shared.module";
 
 @Module({
-  imports: [TempoModule, SharedModule],
+  imports: [DaysTempoModule, SharedModule],
   controllers: [],
   providers: [
     {
